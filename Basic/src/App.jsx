@@ -1,13 +1,12 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 // import Navbar from './Compunents/Navbar'
-// import Home from './pages/Home'
-import Html from './pages/Html'
-import List from './pages/List'
-import Grid from './pages/Grid'
-import Task from './pages/Task'
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
+import Home1 from './pages/Home1'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Detail from './pages/Detail'
 
 
 
@@ -15,12 +14,35 @@ function App() {
 
   return (
     <>
-    {/* <Navbar/> */} 
+    {/* <Navbar/>  */}
     {/* <Home/> */}
     {/* <Html/> */}
     {/* <List/> */}
     {/* <Grid/> */}
-    <Task/>
+    {/* <Task/> */}
+
+    <Router>
+      <Routes>
+        
+
+        <Route path='/' element={<Home1/>} />
+      </Routes>
+      <Routes>
+        
+
+        <Route path='/about' element={<About/>} />
+      </Routes>
+      <Routes>
+        
+
+        <Route path='/contact' element={<Contact/>} />
+      </Routes>
+      <Routes>
+        
+
+        <Route path='/detail' element={<Detail/>} />
+      </Routes>
+    </Router>
 
    
       
